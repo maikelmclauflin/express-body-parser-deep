@@ -1,0 +1,11 @@
+{
+  "name": "parser-deep",
+  "version": "1.0.0",
+  "description": "deep parse posted form data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
+  "license": "MIT"
+}
