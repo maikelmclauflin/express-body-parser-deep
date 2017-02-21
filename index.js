@@ -1,6 +1,9 @@
 var booleans = {
     true: true,
-    false: false
+    false: false,
+    undefined: undefined,
+    null: null,
+    NaN: NaN
 };
 module.exports = {
     json: function () {
