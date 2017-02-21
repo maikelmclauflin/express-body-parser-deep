@@ -1,3 +1,7 @@
+var booleans = {
+    true: true,
+    false: false
+};
 module.exports = {
     json: function () {
         return function (req, res, next) {
@@ -14,9 +18,13 @@ function parse(value) {
     if (typeof value !== 'string') {
         return value;
     }
-    var first = value[0],
+    var converted, first = value[0],
         last = value[value.length - 1];
-    if ((first === '{' && last === '}') || (first === '[' && last === ']')) {
+    if (booleans.hasOwnProperty(value)) {
+        return booleans[value];
+    } else if ((converted = +value) === converted) {
+        return converted;
+    } else if ((first === '{' && last === '}') || (first === '[' && last === ']')) {
         return tryparse(value);
     } else {
         return value;
